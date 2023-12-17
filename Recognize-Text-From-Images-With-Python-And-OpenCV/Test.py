@@ -64,7 +64,7 @@ def crop_img(test_image):
         file_path = os.path.join(crop_folder, file)
         os.remove(file_path)
         print(f"Đã xóa file: {file_path}")
-        
+
     for c in cntrs:
         box = cv2.boundingRect(c)
         if box != topbox:
@@ -233,7 +233,6 @@ if filename != "":
         temp = name_file[1].split("_")
         # Đọc ảnh lớn
         large_image = cv2.imread(test_image)
-
     
         # Tọa độ và kích thước của ảnh nhỏ (điều chỉnh theo tọa độ thực của bạn)
         y, y_end, x, x_end = int(temp[1]), int(temp[2]), int(temp[3]), int(temp[4])
@@ -273,7 +272,7 @@ if filename != "":
         cv2.waitKey(0)
         cv2.destroyAllWindows()
 else:
-    text = "Không tìm thấy mã số sinh viên"
+    text = "Khong tim thay ma so sinh vien"
     # Ghi chữ lên ảnh
     large_image = cv2.imread(test_image)
     # Tọa độ và font
